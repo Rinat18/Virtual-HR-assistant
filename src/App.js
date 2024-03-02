@@ -133,7 +133,7 @@ export default function App() {
     <div className={`myapp ${theme}`}>
       <div className="videoLeft">
         <div style={{color:"#7d10a4"}} className="videoLeft_container">
-          <h1>HR ASSISTANT</h1>
+          <h1>HR</h1>
           <div className="appvide">
             <video
               className="videoR"
