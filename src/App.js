@@ -115,12 +115,17 @@ export default function App() {
   }, [emotion]);
 
   useEffect(() => {
-    if (answerUser == "это блок кода который повторяет сам себя пока заданное условие правильное") {
+    if (
+      answerUser ==
+      "это блок кода который повторяет сам себя пока заданное условие правильное"
+    ) {
       setQuestion("Что такое условый оператор?");
-    } else if (answerUser == "это блок кода которые сработает если условие правильное") {
+    } else if (
+      answerUser == "это блок кода которые сработает если условие правильное"
+    ) {
       setQuestion("Что такое useState?");
-    } else if (answerUser == "это хук реакта "){
-      setQuestion("Ваши ответы записанны ожидайте результаты.")
+    } else if (answerUser == "это хук реакта ") {
+      setQuestion("Ваши ответы записанны ожидайте результаты.");
     }
   }, [answerUser]);
 
@@ -130,10 +135,10 @@ export default function App() {
   };
 
   return (
-    <div className={`myapp ${theme}`}>
+    <div className="myapp">
       <div className="videoLeft">
-        <div style={{color:"#7d10a4"}} className="videoLeft_container">
-          <h1>HR</h1>
+        <div style={{ color: "#7d10a4" }} className="videoLeft_container">
+          <h1>HR ASSISTANT</h1>
           <div className="appvide">
             <video
               className="videoR"
@@ -146,14 +151,16 @@ export default function App() {
         <canvas ref={canvasRef} className="appcanvas" />
       </div>
       <div className="textRight">
-        <h2 style={{color:"#7d10a4"}}>{question}</h2>
-        <div className="inp">
-          <input
-            onChange={(e) => setAnswer(e.target.value)}
-            value={answer}
-            type="text"
-          />{" "}
-          <button onClick={() => clean()}>Send</button>
+        <div style={{width:"80%"}}>
+          <h2 style={{ color: "#fff" }}>{question}</h2>
+          <div className="inp">
+            <textarea
+              onChange={(e) => setAnswer(e.target.value)}
+              value={answer}
+              type="text"
+            />{" "}
+            <button onClick={() => clean()}>Send</button>
+          </div>
         </div>
       </div>
     </div>
